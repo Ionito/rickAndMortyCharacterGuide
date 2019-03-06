@@ -65,7 +65,7 @@ return (
      <TopMenu onSelect={this.handleSelect} episodes={this.state.episodes} title={this.state.selectedEpisode}/>
   </header>
   <main className="container">
-    <CharacterTable characters={this.state.characters} />
+     <CharacterTable characters={this.state.characters} more={(this.state.nextPage!=='')?true:false} />
   </main>
 </React.Fragment>
 );

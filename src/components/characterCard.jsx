@@ -5,16 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const CharacterCard = ({title,img,created,status,species,loc}) => {
     
     const creado = new Date(created);
-    console.log(creado + ' - ' + created )
     const fecha = ("0" + creado.getDate()) + '/' + ("0" + (creado.getMonth() + 1)).slice(-2) + '/' + creado.getFullYear();
     
     let statusClassName = status.toLowerCase();
     let iconStatus = (statusClassName==="dead")?'skull-crossbones':'heart';
     if(statusClassName==='unknown')iconStatus='question-circle';
     statusClassName+=" card";
-
- 
-    
 
     return ( 
         <article>
