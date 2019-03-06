@@ -1,33 +1,128 @@
-.App {
+@font-face {
+  font-family: 'rick_and_mortymedium';
+  src: url('./fonts/rick_and_morty_by_shittychan-d9h2vl6-webfont.woff2') format('woff2'),
+       url('./fonts/rick_and_morty_by_shittychan-d9h2vl6-webfont.woff') format('woff'),
+       url('./fonts/rick_and_morty_by_shittychan-d9h2vl6-webfont.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body{
+  background: #5e7c7d;
+}
+
+.jumbotron{
+  background-color: #000;
+}
+
+div.jumbotron>div>h1, div.jumbotron>div>p{  
+  font-size: 1.7rem;
+  font-family: 'rick_and_mortymedium';
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+div.jumbotron>div>h1{
+font-weight: bold;
+letter-spacing: 0.1rem;
+  font-size: 4rem;
+  color: #15abc6;
+  text-shadow: 1px 1px 4px #1AFF00;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav{
+  justify-content: center;
+  align-items: center;
+}
+
+section{
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+article{
+    float: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.card{
+  width: 18rem;
+  height: 498px;
+
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  border: 3px solid #333;
+  background: #eee;
+}
+
+.card img{
+  width: 240px;
+  height: 240px;
+  margin: 10px auto;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 1px 2px rgba(20,20,20,0.8);
+  webkit-box-shadow: 0px 0px 1px 2px rgba(20,20,20,0.8);
+}
+
+.list-group {
+  display: block;
+}
+
+.list-group-item{height: 51px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;}
+
+
+.card-body.metadata{ 
+  font-size: 0.7rem;
+  padding: 0;
+  margin: 0px 0 0 143px;
+  background: #eee;
+}
+
+.card-body .icon{
+  margin: 0 5px;
+}
+
+.card-title{
+  margin-bottom: 0.15rem;
+  height: 1.5rem;
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.card.alive{
+  border: 3px solid rgb(50, 197, 160);
+}
+.card.dead{
+  border: 3px solid #ef4242;
+}
+
+div>ul.list-group > li.list-group-item:first-child, div>ul.list-group > li.list-group-item:nth-child(2) {
+  background: #eee;
+}
+
+div.alive>ul.list-group > li.list-group-item:nth-child(3){
+  background:rgb(50, 197, 160);
+}
+
+
+div.dead>ul.list-group > li.list-group-item:nth-child(3){
+  background:#ef4242;
+}
+
+div>ul.list-group > li.list-group-item> .icon{
+margin-right: 5px;
 }
